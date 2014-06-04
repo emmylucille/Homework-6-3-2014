@@ -9,27 +9,44 @@
 
 <style>
 
+  body {
+    margin: 0px auto;
+  }
+
   .top {
     background-image: url(http://www.videocopilot.net/blogstuff/surface_sm.jpg);
+    background-size: cover;
     height: 500px;
     width: 100%;
     vertical-align: center;
     text-align: center;
+
   }
 
-  .top h1 {
-    font-family: Oswald;
-    font-size: 100px;
-    color: white;
-    margin-top: 200px;
-  }
-
-  .main h3 {
+  .top h2 {
     font-family: Asap;
-    font-size: 30px;
-    color: darkblue;
-    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+  }
 
+  .top a {
+    font-family: Oswald;
+    font-size: 15px;
+    color: black;
+  }
+
+  #headline {
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 80px;
+    color: white;
+    padding-top: 80px;
+  }
+
+  .main {
+    max-width: 600px;
+    margin-left: 0 auto;
+    padding: 25px;
   }
 
   .main img {
@@ -49,13 +66,27 @@
     font-size: 12;
   }
 
+  .main h3 {
+    font-family: Asap;
+    font-size: 30px;
+    color: darkblue;
+    text-transform: uppercase;
+    border-left: solid lightgray 5px;
+    text-indent: 15px;
+  }
+
   .main p {
     font-family: Asap;
     color: gray;
-    style: light;
     font-size: 16;
     margin: 2px;
 
+  }
+
+  .main a {
+    font-family: Asap;
+    color: darkblue;
+    font-size: 12px;
   }
 
   #left {
@@ -100,6 +131,9 @@
     float: left;
     background-size: cover;
     background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg)
+    color: black;
+    font-family: Oswald;
+    font-size: 35px;
   }
 
   .centered{
@@ -112,6 +146,74 @@
     background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg)
   }
 
+  .buttons {
+    font-family: Asap;
+    color: lightgray;
+    font-size: 14;
+    margin-right: 5px;
+    list-style-type: none;
+  }
+
+  .annie {
+    max-width: 300px;
+    margin-right: 0 auto;
+  }
+  .annie h1 {
+    font-family: Asap;
+    color: darkblue;
+    text-transform: uppercase;
+    font-size: 18;
+  }
+
+  .annie li {
+    font-family: Asap;
+    color: lightgray;
+    font-size: 14;
+    list-style-type: none;
+    border-left: solid lightgray 3px;
+    float: left;
+    padding: 5px;
+  }
+
+  .ocean a {
+    font-family: Asap;
+    color: lightgray;
+    font-size: 12;
+    max-width: 300px;
+    margin-right: 0 auto;
+  }
+
+  }
+
+  .additional {
+    max-width: 300px;
+    margin-right: 0 auto;
+    }
+
+  .additional h1 {
+    font-family: Oswald;
+    color: darkblue;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0;
+    }
+
+  .additional p {
+    font-family: Asap;
+    color: lightgray;
+    font-size: 16;
+    max-width: 300px;
+    margin-right: 0 auto;
+
+  }
+  .bottom h1{
+    font-family: Oswald;
+    text-transform: Uppercase;
+    color: darkblue;
+    font-size: 50px;
+    text-align: center;
+  }
+
 </style>
 
 <body>
@@ -119,19 +221,20 @@
     <a href="#"><p id="left">Surf & Paddle Co. Blog</p></a>
     <a href="#"><p class="right">Home</p></a>
     <a href="http://www.Google.com"><p class="right">Search</p></a>
-    <h1>Social Dolphins</h1>
+    <h1 id= "headline">Social Dolphins</h1>
     <h2>An Iron Yard Academy Project est. 2014</h2>
   </div>
 
   <div class="main">
     <h1>Bottlenose Dolphins Live In Fluid Social Groups</h1>
     <img src= "http://newshour-tc.pbs.org/newshour/wp-content/uploads/2014/03/dolphin.jpg"></img>
+    <br>
     <a href="#">Annie Dolphin</a>
     <h2>on Monday, June 7th 9:22pm</h2>
 
     <p>In the past, bottlenose dolphin groups have been referred to as pods-social groups of unchanging composition. More recently, long-term studies of bottlenose dolphins have now shown that their group composition changes. Bottlenose dolphins commonly swim in groups of 2 to 15 individuals. Several groups may temporarily join (for several minutes or hours) in open ocean waters to form larger groups during which the dolphins may change associates.</p>
 
-    <h3>Dolphins commonly swim in groups</h3>
+    <h3>"Dolphins swim in groups"</h3>
 
     <p>In general, group size tends to increase with water depth and openness of habitat. This may correlate with foraging strategies and protection. Some group members establish strong social bonds. In the wild, group composition and structure are based largely on age, sex, reproductive condition, family relationships, and association histories. For example, the Sarasota, Florida resident dolphin community shows patterns of association. Basic group types include nursery groups (mothers and their most recent offspring), juveniles (both males and females), and adult males (alone or in pairs).<br><br>Mother-calf bonds are long-lasting; a calf typically stays with its mother three to six years. A female may return to its mother or female relatives to raise its own calves, comprising a multigenerational group. Adult male pair bonds are strong and long-lasting. Male pairs often engage in a number of cooperative behaviors. Researchers have documented 20-year pair bonds. Associations between males and females are short-lived.</p>
 
@@ -153,23 +256,25 @@
       <li href="#">Instagram</li>
     </ul>
   </div>
-
+  <br><br>
   <div class="ocean">
-    <img src="http://www.key-largo-sunsets.com/image-files/bottlenose-dolphin.jpg"></img><br>
+    <img src="http://www.key-largo-sunsets.com/image-files/bottlenose-dolphin.jpg" height="200"></img>
+    <br>
     <a href="http://www.key-largo-sunsets.com/bottlenose-dolphins.html">More Facts about Bottlenose Dolphins</a>
+    <br><br>
   </div>
 
-  <div>
+  <div class="additional">
     <h1>Other Social Animals</h1>
     <p>The most commonly known example of a social animal is a domestic dog. In the case of social animals, it can be detrimental to their development to not have those social interactions, as they are crucial. These interactions and socializing will help to develop emotional stability and flexibility for the span of the animals life.</p>
   </div>
 
   <div class="bottom">
-    <h1>Other Popular Dolphins</h1>
-      <span class="centered">Hector's Dolphins</span>
-      <span class="centered">Hector's Dolphins</span>
-      <span class="centered">Hector's Dolphins</span>
-      <span class="centered">Hector's Dolphins</span>
+    <h1>Popular Dolphins</h1>
+      <span class="centered">Hector's Dolphin</span>
+      <span class="centered">Striped Dolphin</span>
+      <span class="centered">White Beaked Dolphin</span>
+      <span class="centered">Dusky Dolphin</span>
 
   </div>
 
