@@ -1,0 +1,249 @@
+body {
+  margin: 0px auto;
+}
+
+header {
+  background-image: url(http://www.videocopilot.net/blogstuff/surface_sm.jpg);
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+
+}
+
+#headline {
+  font-family: Helvetica;
+  text-transform: uppercase;
+  font-size: 90px;
+  color: white;
+  padding-top: 100px;
+}
+
+header p {
+  font-family: Asap;
+  font-size: 12px;
+  color: black;
+  margin: -10px;
+}
+
+header a {
+  text-decoration: none;
+  padding: 20px;
+}
+
+.left {
+  font-family: Asap;
+  font-size: 14px;
+  color: black;
+  float: left;
+  margin-left: 10px;
+}
+
+.right {
+  font-family: Oswald;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: black;
+  float: right;
+  margin-right: 10px;
+}
+
+article {
+  max-width: 600px;
+  margin-left: 150px;
+  float: left;
+}
+
+
+article h1 {
+  font-family: Oswald;
+  text-transform: Uppercase;
+  color: darkblue;
+  font-size: 50px;
+}
+
+article h2 {
+  font-family: Asap;
+  color: lightgray;
+  font-size: 12px;
+}
+
+article h3 {
+  font-family: Asap;
+  font-size: 30px;
+  color: darkblue;
+  text-transform: uppercase;
+  border-left: solid lightgray 3px;
+  text-indent: 15px;
+}
+
+article p {
+  font-family: Asap;
+  color: gray;
+  font-size: 14px;
+  padding-right: 5px;
+
+}
+
+article a {
+  font-family: Asap;
+  color: darkblue;
+  font-size: 12px;
+  text-decoration: none;
+  padding-right: 5px;
+}
+
+article img {
+  height: 40px;
+  padding-right: 5px;
+  margin: -5px;
+}
+
+#dolphin {
+  border-radius: 100%;
+}
+
+section {
+  font-family: Asap;
+  color: lightgray;
+  font-size: 14;
+  list-style-type: none;
+  clear: left;
+}
+
+#articlelinks {
+  background: blue;
+}
+
+section li {
+  display: inline-block;
+  list-style: none;
+  color: gray;
+  float: left;
+}
+
+aside {
+  float: right;
+  max-width: 350px;
+  margin-right: 150px;
+}
+
+.centered{
+  display: inline-block;
+  height: 200px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg)
+}
+
+.centered{
+  display: inline-block;
+  height: 200px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg);
+}
+
+.centered{
+  display: inline-block;
+  height: 200px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg);
+  color: black;
+  font-family: Oswald;
+  font-size: 35px;
+}
+
+.centered{
+  display: inline-block;
+  height: 200px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg)
+}
+
+.annie {
+  vertical-align: center;
+}
+
+.annie h1 {
+  font-family: Asap;
+  color: darkblue;
+  text-transform: uppercase;
+  font-size: 18;
+  text-align: center;
+}
+
+.annie li {
+  font-family: Asap;
+  color: lightgray;
+  font-size: 14;
+  list-style: none;
+  border-left: solid lightgray 3px;
+  float: left;
+  padding: 5px;
+}
+
+.annie img {
+  height: 70px;
+  margin-top: 50px;
+}
+
+.ocean img{
+  margin: 50px 150px 50px 50px;
+}
+
+.ocean a {
+  font-family: Asap;
+  color: lightgray;
+  font-size: 10px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.additional {
+  max-width: 300px;
+}
+
+.additional h1 {
+  font-family: Oswald;
+  color: blue;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+
+.additional p {
+  font-family: Asap;
+  color: lightgray;
+  font-size: 12;
+  max-width: 300px;
+}
+
+.links {
+  clear: both;
+}
+
+.links h1{
+  font-family: Oswald;
+  text-transform: Uppercase;
+  color: darkblue;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+  margin: 20px;
+}
+
+.ironyard {
+  background-color: darkblue;
+  background-size: cover;
+  height: 300px;
+}
