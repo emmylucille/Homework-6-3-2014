@@ -1,50 +1,70 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  margin: 0px auto;
+  margin: 0px;
 }
 
 header {
   background-image: url(http://www.videocopilot.net/blogstuff/surface_sm.jpg);
   background-size: cover;
   height: 500px;
-  text-align: center;
+  position: relative;
+}
 
+.container {
+  width: 965px;
+  margin: auto;
+  padding: 40px;
+}
+
+.opener {
+  text-align: center;
 }
 
 #headline {
-  font-family: Helvetica;
+  font-family: PT Sans;
   text-transform: uppercase;
-  font-size: 90px;
+  font-size: 100px;
   color: white;
-  padding-top: 100px;
+  letter-spacing: 4px;
+  margin-bottom: 0;
 }
 
-header p {
+.opener p {
   font-family: Asap;
-  font-size: 12px;
-  color: black;
-  margin: -10px;
+  font-size: 16px;
+  color: #06344f;
+  margin: 0;
 }
 
-header a {
-  text-decoration: none;
-  padding: 20px;
-}
-
-.left {
-  font-family: Asap;
+.blog a {
+  font-family: PT Sans;
   font-size: 14px;
-  color: black;
-  float: left;
-  margin-left: 10px;
+  color: #06344f;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+  max-width: 400px;
 }
 
-.right {
+#home {
+  margin-right: 20px;
+}
+
+.right a {
   font-family: Oswald;
   font-size: 15px;
   text-transform: uppercase;
-  color: black;
-  float: right;
-  margin-right: 10px;
+  color: #06344f;
+  text-decoration: none;
+}
+
+.right {
+  margin-left: 780px;
 }
 
 article {
@@ -57,8 +77,9 @@ article {
 article h1 {
   font-family: Oswald;
   text-transform: Uppercase;
-  color: darkblue;
+  color: #06344F;
   font-size: 50px;
+  line-height: 60px;
 }
 
 article h2 {
@@ -242,8 +263,23 @@ aside {
   margin: 20px;
 }
 
-.ironyard {
-  background-color: darkblue;
+footer .blue {
+  background-color: #06344f;
   background-size: cover;
-  height: 300px;
+  height: 200px;
+  position: relative;
+}
+
+footer .ironyard {
+  font-size: 12px;
+  font-family: Asap;
+  color: black;
+  position: absolute;
+}
+
+footer li {
+  text-decoration: none;
+  font-family: Asap;
+  font-size: 12px;
+  color: black;
 }
