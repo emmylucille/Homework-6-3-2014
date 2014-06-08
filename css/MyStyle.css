@@ -15,11 +15,22 @@ header {
   position: relative;
 }
 
+@media screen and (max-width: 320px) {
+  header {
+    height: 175px;
+  }
+}
+
 .container {
   width: 965px;
   margin: auto;
-  padding: 40px;
 }
+
+ @media screen and (max-width: 320px){
+    .container {
+    width: 275px;
+  }
+ }
 
 .opener {
   text-align: center;
@@ -30,15 +41,30 @@ header {
   text-transform: uppercase;
   font-size: 100px;
   color: white;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 320px) {
+  #headline {
+  font-size: 33px;
+  }
+}
 .opener p {
   font-family: Asap;
   font-size: 16px;
   color: #06344f;
   margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+  .opener p {
+  font-size: 15px;
+  }
+}
+
+.blog {
+  padding-top: 25px;
 }
 
 .blog a {
@@ -48,7 +74,12 @@ header {
   text-transform: uppercase;
   text-decoration: none;
   position: absolute;
-  max-width: 400px;
+}
+
+@media screen and (max-width: 320px){
+  .blog a {
+  display: none;
+  }
 }
 
 #home {
@@ -64,17 +95,22 @@ header {
 }
 
 .right {
-  margin-left: 780px;
+  float: right;
 }
 
-article {
-  max-width: 600px;
-  margin-left: 150px;
+@media screen and (max-width: 320px){
+  .right {
+  float: none;
+  text-align: center;
+  }
+}
+
+article .content {
+  width: 500px;
   float: left;
 }
 
-
-article h1 {
+article .content h1 {
   font-family: Oswald;
   text-transform: Uppercase;
   color: #06344F;
@@ -82,38 +118,56 @@ article h1 {
   line-height: 60px;
 }
 
-article h2 {
+@media screen and (max-width: 320px){
+    article .content {
+    width: 300px;
+    padding: 5px;
+    }
+}
+
+article .content h2 {
   font-family: Asap;
   color: lightgray;
   font-size: 12px;
 }
 
-article h3 {
+@media screen and (max-width: 320px){
+    article .content img {
+    display: none;
+    }
+    article .content a {
+    display: none;
+    }
+}
+
+article .content h3 {
   font-family: Asap;
   font-size: 30px;
-  color: darkblue;
+  color: #126faf;
   text-transform: uppercase;
   border-left: solid lightgray 3px;
-  text-indent: 15px;
+  padding-left: 20px
 }
 
-article p {
+article .content p {
   font-family: Asap;
-  color: gray;
+  color: #5e686f;
   font-size: 14px;
   padding-right: 5px;
+  line-height: 20px;
 
 }
 
-article a {
+article .content a {
   font-family: Asap;
-  color: darkblue;
+  color: #126faf;
   font-size: 12px;
   text-decoration: none;
-  padding-right: 5px;
+  padding-right: 4px;
+  padding-left: 12px;
 }
 
-article img {
+article .content img {
   height: 40px;
   padding-right: 5px;
   margin: -5px;
@@ -121,56 +175,130 @@ article img {
 
 #dolphin {
   border-radius: 100%;
-}
-
-section {
-  font-family: Asap;
-  color: lightgray;
-  font-size: 14;
-  list-style-type: none;
-  clear: left;
+  padding: 0;
 }
 
 #articlelinks {
   background: blue;
 }
 
-section li {
-  display: inline-block;
+article .media li {
+  display: inline;
   list-style: none;
-  color: gray;
-  float: left;
+  clear: both;
+  font-family: Asap;
+  color: lightgray;
+}
+
+@media screen and (max-width: 320px){
+    article .content h2 .extratext {
+    display: none;
+    float: none;
+    }
+    article .content h2 {
+    text-decoration: underline;
+    margin-top: -25px;
+    font-size: 14px;
+    }
+}
+
+section.media {
+  clear: both;
 }
 
 aside {
   float: right;
-  max-width: 350px;
-  margin-right: 150px;
+  max-width: 275px;
 }
 
-.centered{
-  display: inline-block;
-  height: 200px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg)
+@media screen and (max-width: 320px){
+  aside .additional {
+  display: none;
+  float: none;
+  }
 }
 
-.centered{
-  display: inline-block;
-  height: 200px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg);
+.annie {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.centered{
+.annie ul {
+  padding: 0;
+}
+
+.annie h1 {
+  font-family: Asap;
+  color: #126faf;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+
+.annie li {
+  font-family: Asap;
+  color: lightgray;
+  font-size: 16px;
+  list-style: none;
+  border-left: solid lightgray 2px;
+  display: inline;
+  padding: 5px;
+}
+
+.annie li:first-child {
+  border: none;
+}
+
+.annie img {
+  height: 70px;
+  margin-top: 50px;
+}
+
+.ocean a {
+  font-family: Asap;
+  color: #a3b3bf;
+  font-size: 16px;
+  float: right;
+}
+
+.additional {
+  max-width: 300px;
+}
+
+.additional h1 {
+  font-family: Oswald;
+  color: #126faf;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 40px 0px 0px 0px;
+}
+
+.additional p {
+  font-family: Asap;
+  color: #a3b3bf;
+  font-size: 14px;
+  max-width: 300px;
+  line-height: 20px;
+}
+
+.links {
+  clear: both;
+}
+
+.links h1{
+  font-family: Oswald;
+  text-transform: Uppercase;
+  color: #06344F;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  margin: 0px;
+}
+
+section .centered {
   display: inline-block;
-  height: 200px;
+  height: 300px;
   width: 25%;
   margin: 0;
   float: left;
@@ -181,105 +309,45 @@ aside {
   font-size: 35px;
 }
 
-.centered{
-  display: inline-block;
-  height: 200px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg)
-}
-
-.annie {
-  vertical-align: center;
-}
-
-.annie h1 {
-  font-family: Asap;
-  color: darkblue;
-  text-transform: uppercase;
-  font-size: 18;
-  text-align: center;
-}
-
-.annie li {
-  font-family: Asap;
-  color: lightgray;
-  font-size: 14;
-  list-style: none;
-  border-left: solid lightgray 3px;
-  float: left;
-  padding: 5px;
-}
-
-.annie img {
-  height: 70px;
-  margin-top: 50px;
-}
-
-.ocean img{
-  margin: 50px 150px 50px 50px;
-}
-
-.ocean a {
-  font-family: Asap;
-  color: lightgray;
-  font-size: 10px;
-  padding: 10px;
-  margin-bottom: 50px;
-}
-
-.additional {
-  max-width: 300px;
-}
-
-.additional h1 {
-  font-family: Oswald;
-  color: blue;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 10px 0px;
-}
-
-.additional p {
-  font-family: Asap;
-  color: lightgray;
-  font-size: 12;
-  max-width: 300px;
-}
-
-.links {
-  clear: both;
-}
-
-.links h1{
-  font-family: Oswald;
-  text-transform: Uppercase;
-  color: darkblue;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 50px;
-  margin: 20px;
-}
-
-footer .blue {
+footer {
   background-color: #06344f;
   background-size: cover;
-  height: 200px;
-  position: relative;
+  height: 80px;
+  clear: both;
+  margin: auto;
 }
 
 footer .ironyard {
-  font-size: 12px;
+  font-size: 11px;
   font-family: Asap;
-  color: black;
-  position: absolute;
+  color: #a3b1b9;
+  float: left;
+  width: 400px;
+}
+
+footer img {
+  float: left;
+  margin-top: 10px;
+}
+
+footer p {
+  margin-top: 35px
 }
 
 footer li {
-  text-decoration: none;
+  list-style: none;
   font-family: Asap;
-  font-size: 12px;
-  color: black;
+  font-size: 11px;
+  color: #a3b1b9;
+  float: right;
+  border-right: solid white 2px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 35px;
+}
+
+footer li:first-child {
+  margin-right: none;
+  border-right: none;
+  padding: none;
 }
