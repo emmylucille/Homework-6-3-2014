@@ -1,3 +1,9 @@
+// Variables
+$lightgray: #9cb9c4;
+$darkgray: #526870;
+$darkblue: #06344F;
+$blue: #126faf;
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -50,6 +56,7 @@ header {
   font-size: 33px;
   }
 }
+
 .opener p {
   font-family: Asap;
   font-size: 16px;
@@ -98,10 +105,17 @@ header {
   float: right;
 }
 
+#search {
+  padding-left: 4px;
+}
+
 @media screen and (max-width: 320px){
   .right {
   float: none;
   text-align: center;
+  }
+  #search {
+  display: none;
   }
 }
 
@@ -113,7 +127,7 @@ article .content {
 article .content h1 {
   font-family: Oswald;
   text-transform: Uppercase;
-  color: #06344F;
+  color: $darkblue;
   font-size: 50px;
   line-height: 60px;
 }
@@ -127,7 +141,7 @@ article .content h1 {
 
 article .content h2 {
   font-family: Asap;
-  color: lightgray;
+  color: $lightgray;
   font-size: 12px;
 }
 
@@ -135,7 +149,7 @@ article .content h2 {
     article .content img {
     display: none;
     }
-    article .content a {
+    article .author {
     display: none;
     }
 }
@@ -143,24 +157,24 @@ article .content h2 {
 article .content h3 {
   font-family: Asap;
   font-size: 30px;
-  color: #126faf;
+  color: $blue;
   text-transform: uppercase;
-  border-left: solid lightgray 3px;
+  border-left: solid $lightgray 3px;
   padding-left: 20px
 }
 
 article .content p {
   font-family: Asap;
-  color: #5e686f;
+  color: $darkgray;
   font-size: 14px;
   padding-right: 5px;
   line-height: 20px;
 
 }
 
-article .content a {
+article .author {
   font-family: Asap;
-  color: #126faf;
+  color: $blue;
   font-size: 12px;
   text-decoration: none;
   padding-right: 4px;
@@ -182,12 +196,57 @@ article .content img {
   background: blue;
 }
 
-article .media li {
-  display: inline;
-  list-style: none;
-  clear: both;
+.buttons {
+  margin-top: 30px
+}
+
+.buttons a {
   font-family: Asap;
-  color: lightgray;
+  color: white;
+  font-size: 12px;
+  background-color: $lightgray;
+  padding: 6px 14px 6px 0px;
+  clear: both;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+.buttons i {
+  color: white;
+  background-color: $darkgray;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+// #extrabutton {
+//   font-family: Asap;
+//   color: white;
+//   font-size: 12px;
+//   background-color: #9cb9c4;
+//   padding: 8px 14px 5px 10px;
+//   clear: both;
+//   margin-right: 10px;
+//   margin-left: -10px;
+//   text-decoration: none;
+// }
+//
+// .buttons i {
+//   color: white;
+//   background-color: #52686f;
+//   padding: 6px;
+//   margin-right: 10px;
+// }
+
+
+@media screen and (max-width: 320px){
+    #extrabutton {
+    display:none;
+  }
+      .buttons a {
+    background: none;
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 320px){
@@ -229,7 +288,7 @@ aside {
 
 .annie h1 {
   font-family: Asap;
-  color: #126faf;
+  color: $blue;
   text-transform: uppercase;
   font-size: 18px;
   text-align: center;
@@ -237,10 +296,10 @@ aside {
 
 .annie li {
   font-family: Asap;
-  color: lightgray;
+  color: $lightgray;
   font-size: 16px;
   list-style: none;
-  border-left: solid lightgray 2px;
+  border-left: solid $lightgray 2px;
   display: inline;
   padding: 5px;
 }
@@ -256,7 +315,7 @@ aside {
 
 .ocean a {
   font-family: Asap;
-  color: #a3b3bf;
+  color: $lightgray;
   font-size: 16px;
   float: right;
 }
@@ -267,7 +326,7 @@ aside {
 
 .additional h1 {
   font-family: Oswald;
-  color: #126faf;
+  color: $blue;
   font-size: 16px;
   text-transform: uppercase;
   padding: 40px 0px 0px 0px;
@@ -275,7 +334,7 @@ aside {
 
 .additional p {
   font-family: Asap;
-  color: #a3b3bf;
+  color: $lightgray;
   font-size: 14px;
   max-width: 300px;
   line-height: 20px;
@@ -288,7 +347,7 @@ aside {
 .links h1{
   font-family: Oswald;
   text-transform: Uppercase;
-  color: #06344F;
+  color: $darkblue;
   font-size: 50px;
   text-align: center;
   padding-top: 100px;
@@ -296,21 +355,68 @@ aside {
   margin: 0px;
 }
 
-section .centered {
+section .img1 {
   display: inline-block;
   height: 300px;
   width: 25%;
   margin: 0;
   float: left;
   background-size: cover;
-  background-image: url(http://awsassets.panda.org/img/hectors_dolphin_sdawson26578_352388.jpg);
-  color: black;
+  background-image: url(http://1.bp.blogspot.com/-rQkvR0FkPbk/TVgPUUpyDKI/AAAAAAAAAqw/pDoq6sPfI1U/s1600/Jumping_Bottlenose_Dolphins.jpg);
+  color: $darkblue;
   font-family: Oswald;
   font-size: 35px;
+  padding-top: 245px;
+  padding-left: 15px;
+}
+
+section .img2 {
+  display: inline-block;
+  height: 300px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://www.backyardstockphotos.com/wp-content/uploads/symbiostock_rf_content/1354-surfboards-at-lumahai-beach-kauai.jpg);
+  color: $darkblue;
+  font-family: Oswald;
+  font-size: 35px;
+  padding-top: 245px;
+  padding-left: 15px;
+}
+
+section .img3 {
+  display: inline-block;
+  height: 300px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://mama-beach.com/mama2/wp-content/uploads/2013/07/photodune-4088822-beauty-beach-and-limestone-rocks-l.jpg);
+  color: $darkblue;
+  font-family: Oswald;
+  font-size: 35px;
+  padding-top: 245px;
+  padding-left: 15px;
+}
+
+section .img4 {
+  display: inline-block;
+  height: 300px;
+  width: 25%;
+  margin: 0;
+  float: left;
+  background-size: cover;
+  background-image: url(http://a.abcnews.go.com/images/Technology/gty_bottlenose_dolphins_jt_120129_wblog.jpg);
+  color: $darkblue;
+  font-family: Oswald;
+  font-size: 35px;
+  padding-top: 245px;
+  padding-left: 15px;
 }
 
 footer {
-  background-color: #06344f;
+  background-color: $darkblue;
   background-size: cover;
   height: 80px;
   clear: both;
@@ -320,7 +426,7 @@ footer {
 footer .ironyard {
   font-size: 11px;
   font-family: Asap;
-  color: #a3b1b9;
+  color: $lightgray;
   float: left;
   width: 400px;
 }
@@ -338,9 +444,9 @@ footer li {
   list-style: none;
   font-family: Asap;
   font-size: 11px;
-  color: #a3b1b9;
+  color: $lightgray;
   float: right;
-  border-right: solid 2px;
+  border-right: solid $lightgray 2px;
   padding-right: 10px;
   padding-left: 10px;
   margin-top: 35px;
@@ -354,7 +460,7 @@ footer li:first-child {
 
 @media screen and (max-width: 320px){
   footer {
-  height: 200px; 
+  height: 200px;
   text-align: center;
   position: relative;
   padding: 15px;

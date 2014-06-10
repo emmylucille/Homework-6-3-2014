@@ -7,8 +7,9 @@
   <title>Surf and Paddle</title>
   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/MyStyle.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="js/modernizr.js" type="text/javascript"></script>
 </head>
 
@@ -16,11 +17,13 @@
   <header>
     <div class="container">
       <nav class="blog">
+        <img src=https://s3.amazonaws.com/uploads.hipchat.com/31349/895339/HZ4Zv7ktiSOriT8/WaveLogo.png></img>
         <a href="#">Surf &amp; Paddle Co. Blog</a>
       </nav>
       <nav class="right">
-          <a href="#" id="home">About</a>
-          <a href="#">Search</a>
+        <a href="#" id="home">About</a>
+        <a href="#">Search</a>
+        <span id="search"><i class="fa fa-search"></i></span>
       </nav>
       <div class="opener">
         <h1 id= "headline">Surf &amp; Paddle</h1>
@@ -33,7 +36,7 @@
     <article>
       <div class="content">
         <h1>Bottlenose Dolphins Live In Social Groups</h1>
-        <h2><img id= "dolphin" src= "https://cdn-assets.answersingenesis.org/img/articles/aqua/Bottlenose_Dolphin.jpg"></img><a href="#">Annie Dolphin</a><span class="extratext">on </span>Monday, June 7th 9:22pm</h2>
+        <h2><img id= "dolphin" src= "https://cdn-assets.answersingenesis.org/img/articles/aqua/Bottlenose_Dolphin.jpg"></img><a href="#" class="author">Annie Dolphin</a><span class="extratext">on </span>Monday, June 7th 9:22pm</h2>
 
         <p>In the past, bottlenose dolphin groups have been referred to as pods-social groups of unchanging composition. More recently, long-term studies of bottlenose dolphins have now shown that their group composition changes. Bottlenose dolphins commonly swim in groups of 2 to 15 individuals. Several groups may temporarily join (for several minutes or hours) in open ocean waters to form larger groups during which the dolphins may change associates.</p>
 
@@ -44,12 +47,10 @@
         <p>Mother-calf bonds are long-lasting; a calf typically stays with its mother three to six years. A female may return to its mother or female relatives to raise its own calves, comprising a multigenerational group. Adult male pair bonds are strong and long-lasting. Male pairs often engage in a number of cooperative behaviors. Researchers have documented 20-year pair bonds. Associations between males and females are short-lived.
         </p>
 
-        <section class="media">
-          <ul>
-            <li>Read Comments</li>
-            <li>Read Later</li>
-            <li>Share This Post</li>
-          </ul>
+        <section class="buttons">
+          <a href="#"><i class="fa fa-comment"></i><span id="extrabutton">Read Comments</span></a>
+          <a href="#"><i class="fa fa-cloud-upload"></i><span id="extrabutton">Read Later</span></a>
+          <a href="#"><i class="fa fa-share"></i><span id="extrabutton">Share This Post</span></a>
         </section>
       </div>
     </article>
@@ -59,11 +60,11 @@
         <img id= "dolphin" src= "https://cdn-assets.answersingenesis.org/img/articles/aqua/Bottlenose_Dolphin.jpg">
         </img>
         <h1>Annie Dolphin</h1>
-        <ul>
+        <nav>
           <li href="#">Twitter</li>
           <li href="#">Facebook</li>
           <li href="#">Instagram</li>
-        </ul>
+        </nav>
       </div>
 
       <div class="ocean">
@@ -81,16 +82,17 @@
 
   <section class="links">
     <h1>Popular Dolphins</h1>
-      <span class="centered">Hector's Dolphin</span>
-      <span class="centered">Striped Dolphin</span>
-      <span class="centered">White Beaked Dolphin</span>
-      <span class="centered">Dusky Dolphin</span>
+      <span class="img1">Hector's Dolphin</span>
+      <span class="img2">Striped Dolphin</span>
+      <span class="img3">White Beaked Dolphin</span>
+      <span class="img4">Dusky Dolphin</span>
   </section>
 
   <footer>
     <div class="container">
       <div class="ironyard">
-        <img src="file:///Users/emmylucille/Desktop/Screen%20Shot%202014-06-08%20at%2011.54.44%20AM.png"></img><p>The Ironyard CopyRight 2014, All Rights Reserved</p>
+        <img src="images/logo.png"></img>
+        <p>The Ironyard CopyRight 2014, All Rights Reserved</p>
       </div>
       <nav>
         <ul>
