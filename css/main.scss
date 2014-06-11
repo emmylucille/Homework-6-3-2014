@@ -1,14 +1,49 @@
+@import"bourbon/bourbon.scss";
+
+// Classes
+
+
 // Variables
 $lightgray: #9cb9c4;
 $darkgray: #526870;
 $darkblue: #06344F;
 $blue: #126faf;
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+.border-none {
+  border: none;
 }
+
+// * {
+//   -webkit-box-sizing: border-box;
+//      -moz-box-sizing: border-box;
+//           box-sizing: border-box;
+// }
+
+// // Mixins
+
+@mixin circle {
+  border-radius: 100%;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+@mixin photos {
+    display: inline-block;
+    height: 300px;
+    width: 25%;
+    margin: 0;
+    float: left;
+    background-size: cover;
+    color: $darkblue;
+    font-family: Oswald;
+    font-size: 35px;
+    padding-top: 245px;
+    padding-left: 15px;
+}
+
+//
 
 body {
   margin: 0px;
@@ -19,10 +54,7 @@ header {
   background-size: cover;
   height: 500px;
   position: relative;
-}
-
-@media screen and (max-width: 320px) {
-  header {
+  @media screen and (max-width: 320px){
     height: 175px;
   }
 }
@@ -30,16 +62,22 @@ header {
 .container {
   width: 965px;
   margin: auto;
-}
-
- @media screen and (max-width: 320px){
-    .container {
+  @media screen and (max-width: 320px){
     width: 275px;
   }
- }
+}
 
 .opener {
   text-align: center;
+  p {
+    font-family: Asap;
+    font-size: 16px;
+    color: #06344f;
+    margin: 0;
+    @media screen and (max-width: 320px) {
+      font-size: 15px;
+    }
+  }
 }
 
 #headline {
@@ -49,43 +87,24 @@ header {
   color: white;
   letter-spacing: 2px;
   margin-bottom: 0;
-}
-
-@media screen and (max-width: 320px) {
-  #headline {
-  font-size: 33px;
+  @media screen and (max-width: 320px) {
+    font-size: 33px;
   }
 }
 
-.opener p {
-  font-family: Asap;
-  font-size: 16px;
-  color: #06344f;
-  margin: 0;
-}
-
-@media screen and (max-width: 320px) {
-  .opener p {
-  font-size: 15px;
-  }
-}
 
 .blog {
   padding-top: 25px;
-}
-
-.blog a {
-  font-family: PT Sans;
-  font-size: 14px;
-  color: #06344f;
-  text-transform: uppercase;
-  text-decoration: none;
-  position: absolute;
-}
-
-@media screen and (max-width: 320px){
-  .blog a {
-  display: none;
+  a {
+    font-family: PT Sans;
+    font-size: 14px;
+    color: #06344f;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    @media screen and (max-width: 320px){
+      display: none;
+    }
   }
 }
 
@@ -93,83 +112,72 @@ header {
   margin-right: 20px;
 }
 
-.right a {
-  font-family: Oswald;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #06344f;
-  text-decoration: none;
-}
-
 .right {
   float: right;
+  @media screen and (max-width: 320px){
+    float: none;
+    text-align: center;
+  }
+  a {
+    font-family: Oswald;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #06344f;
+    text-decoration: none;
+  }
 }
 
 #search {
   padding-left: 4px;
-}
-
-@media screen and (max-width: 320px){
-  .right {
-  float: none;
-  text-align: center;
-  }
-  #search {
-  display: none;
+  @media screen and (max-width: 320px){
+    display: none;
   }
 }
 
-article .content {
-  width: 500px;
-  float: left;
-}
-
-article .content h1 {
-  font-family: Oswald;
-  text-transform: Uppercase;
-  color: $darkblue;
-  font-size: 50px;
-  line-height: 60px;
-}
-
-@media screen and (max-width: 320px){
-    article .content {
-    width: 300px;
-    padding: 5px;
+article {
+  .content {
+    width: 500px;
+    float: left;
+    @media screen and (max-width: 320px){
+      width: 300px;
+      padding: 5px;
     }
-}
-
-article .content h2 {
-  font-family: Asap;
-  color: $lightgray;
-  font-size: 12px;
-}
-
-@media screen and (max-width: 320px){
-    article .content img {
-    display: none;
+  }
+  .content h1 {
+    font-family: Oswald;
+    text-transform: Uppercase;
+    color: $darkblue;
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .content h2 {
+    font-family: Asap;
+    color: $lightgray;
+    font-size: 12px;
+  }
+  .content h3 {
+    font-family: Asap;
+    font-size: 30px;
+    color: $blue;
+    text-transform: uppercase;
+    border-left: solid $lightgray 3px;
+    padding-left: 20px
+  }
+  .content p {
+    font-family: Asap;
+    color: $darkgray;
+    font-size: 14px;
+    padding-right: 5px;
+    line-height: 20px;
+  }
+  .content img {
+    height: 40px;
+    padding-right: 5px;
+    margin: -5px;
+    @media screen and (max-width: 320px){
+      display: none;
     }
-    article .author {
-    display: none;
-    }
-}
-
-article .content h3 {
-  font-family: Asap;
-  font-size: 30px;
-  color: $blue;
-  text-transform: uppercase;
-  border-left: solid $lightgray 3px;
-  padding-left: 20px
-}
-
-article .content p {
-  font-family: Asap;
-  color: $darkgray;
-  font-size: 14px;
-  padding-right: 5px;
-  line-height: 20px;
-
+  }
 }
 
 article .author {
@@ -179,17 +187,14 @@ article .author {
   text-decoration: none;
   padding-right: 4px;
   padding-left: 12px;
-}
-
-article .content img {
-  height: 40px;
-  padding-right: 5px;
-  margin: -5px;
+  @media screen and (max-width: 320px){
+    display: none;
+  }
 }
 
 #dolphin {
-  border-radius: 100%;
-  padding: 0;
+  @include circle;
+  padding: 2px;
 }
 
 #articlelinks {
@@ -197,55 +202,33 @@ article .content img {
 }
 
 .buttons {
-  margin-top: 30px
+  margin-top: 30px;
+  a {
+    font-family: Asap;
+    color: white;
+    font-size: 12px;
+    background-color: $lightgray;
+    padding: 6px 14px 6px 0px;
+    clear: both;
+    margin-right: 12px;
+    text-decoration: none;
+    @media screen and (max-width: 320px){
+      background: none;
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+  i {
+    color: white;
+    background-color: $darkgray;
+    padding: 7px;
+    margin-right: 10px;
+  }
 }
-
-.buttons a {
-  font-family: Asap;
-  color: white;
-  font-size: 12px;
-  background-color: $lightgray;
-  padding: 6px 14px 6px 0px;
-  clear: both;
-  margin-right: 12px;
-  text-decoration: none;
-}
-
-.buttons i {
-  color: white;
-  background-color: $darkgray;
-  padding: 7px;
-  margin-right: 10px;
-}
-
-// #extrabutton {
-//   font-family: Asap;
-//   color: white;
-//   font-size: 12px;
-//   background-color: #9cb9c4;
-//   padding: 8px 14px 5px 10px;
-//   clear: both;
-//   margin-right: 10px;
-//   margin-left: -10px;
-//   text-decoration: none;
-// }
-//
-// .buttons i {
-//   color: white;
-//   background-color: #52686f;
-//   padding: 6px;
-//   margin-right: 10px;
-// }
-
 
 @media screen and (max-width: 320px){
     #extrabutton {
     display:none;
-  }
-      .buttons a {
-    background: none;
-    padding: 0px;
-    margin: 0px;
   }
 }
 
@@ -280,37 +263,32 @@ aside {
 .annie {
   text-align: center;
   margin-bottom: 50px;
-}
-
-.annie ul {
-  padding: 0;
-}
-
-.annie h1 {
-  font-family: Asap;
-  color: $blue;
-  text-transform: uppercase;
-  font-size: 18px;
-  text-align: center;
-}
-
-.annie li {
-  font-family: Asap;
-  color: $lightgray;
-  font-size: 16px;
-  list-style: none;
-  border-left: solid $lightgray 2px;
-  display: inline;
-  padding: 5px;
-}
-
-.annie li:first-child {
-  border: none;
-}
-
-.annie img {
-  height: 70px;
-  margin-top: 50px;
+  img {
+    height: 70px;
+    margin-top: 50px;
+  }
+  ul {
+    padding: 0;
+  }
+  h1 {
+    font-family: Asap;
+    color: $blue;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+  }
+  li {
+    font-family: Asap;
+    color: $lightgray;
+    font-size: 16px;
+    list-style: none;
+    border-left: solid $lightgray 2px;
+    display: inline;
+    padding: 5px;
+  }
+  li:first-child {
+    border: none;
+  }
 }
 
 .ocean a {
@@ -342,77 +320,36 @@ aside {
 
 .links {
   clear: both;
+  h1{
+    font-family: Oswald;
+    text-transform: Uppercase;
+    color: $darkblue;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    margin: 0px;
+  }
 }
 
-.links h1{
-  font-family: Oswald;
-  text-transform: Uppercase;
-  color: $darkblue;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 30px;
-  margin: 0px;
-}
 
-section .img1 {
-  display: inline-block;
-  height: 300px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://1.bp.blogspot.com/-rQkvR0FkPbk/TVgPUUpyDKI/AAAAAAAAAqw/pDoq6sPfI1U/s1600/Jumping_Bottlenose_Dolphins.jpg);
-  color: $darkblue;
-  font-family: Oswald;
-  font-size: 35px;
-  padding-top: 245px;
-  padding-left: 15px;
-}
-
-section .img2 {
-  display: inline-block;
-  height: 300px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://www.backyardstockphotos.com/wp-content/uploads/symbiostock_rf_content/1354-surfboards-at-lumahai-beach-kauai.jpg);
-  color: $darkblue;
-  font-family: Oswald;
-  font-size: 35px;
-  padding-top: 245px;
-  padding-left: 15px;
-}
-
-section .img3 {
-  display: inline-block;
-  height: 300px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://mama-beach.com/mama2/wp-content/uploads/2013/07/photodune-4088822-beauty-beach-and-limestone-rocks-l.jpg);
-  color: $darkblue;
-  font-family: Oswald;
-  font-size: 35px;
-  padding-top: 245px;
-  padding-left: 15px;
-}
-
-section .img4 {
-  display: inline-block;
-  height: 300px;
-  width: 25%;
-  margin: 0;
-  float: left;
-  background-size: cover;
-  background-image: url(http://a.abcnews.go.com/images/Technology/gty_bottlenose_dolphins_jt_120129_wblog.jpg);
-  color: $darkblue;
-  font-family: Oswald;
-  font-size: 35px;
-  padding-top: 245px;
-  padding-left: 15px;
+section {
+  .img1 {
+    @include photos;
+    background-image: url(http://1.bp.blogspot.com/-rQkvR0FkPbk/TVgPUUpyDKI/AAAAAAAAAqw/pDoq6sPfI1U/s1600/Jumping_Bottlenose_Dolphins.jpg);
+  }
+  .img2 {
+    @include photos;
+    background-image: url(http://www.backyardstockphotos.com/wp-content/uploads/symbiostock_rf_content/1354-surfboards-at-lumahai-beach-kauai.jpg);
+  }
+  .img3 {
+    @include photos;
+    background-image: url(http://mama-beach.com/mama2/wp-content/uploads/2013/07/photodune-4088822-beauty-beach-and-limestone-rocks-l.jpg);
+  }
+  .img4 {
+    @include photos;
+    background-image: url(http://a.abcnews.go.com/images/Technology/gty_bottlenose_dolphins_jt_120129_wblog.jpg);
+  }
 }
 
 footer {
@@ -421,72 +358,69 @@ footer {
   height: 80px;
   clear: both;
   margin: auto;
+  @media screen and (max-width: 320px){
+    height: 200px;
+    text-align: center;
+    position: relative;
+    padding: 15px;
+  }
+  img {
+    float: left;
+    margin-top: 10px;
+    @media screen and (max-width: 320px){
+      float: none;
+    }
+  }
+  p {
+    margin-top: 35px;
+    @media screen and (max-width: 320px){
+      margin: 0px;
+    }
+  }
+  li {
+    list-style: none;
+    font-family: Asap;
+    font-size: 11px;
+    color: $lightgray;
+    float: right;
+    border-right: solid $lightgray 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 35px;
+    @media screen and (max-width: 320px){
+      float: none;
+      display: inline;
+      margin-top: 20px;
+      border-left: solid 2px;
+      border-right: none;
+    }
+  }
 }
 
-footer .ironyard {
+.ironyard {
   font-size: 11px;
   font-family: Asap;
   color: $lightgray;
   float: left;
   width: 400px;
-}
-
-footer img {
-  float: left;
-  margin-top: 10px;
-}
-
-footer p {
-  margin-top: 35px
-}
-
-footer li {
-  list-style: none;
-  font-family: Asap;
-  font-size: 11px;
-  color: $lightgray;
-  float: right;
-  border-right: solid $lightgray 2px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 35px;
+  @media screen and (max-width: 320px){
+    max-width: 150px;
+    position: absolute;
+    margin-top: 40px;
+  }
 }
 
 footer li:first-child {
   margin-right: none;
   border-right: none;
   padding: none;
+  @media screen and (max-width: 320px){
+    border: none;
+  }
 }
 
 @media screen and (max-width: 320px){
-  footer {
-  height: 200px;
-  text-align: center;
-  position: relative;
-  padding: 15px;
-  }
-  footer li{
-  float: none;
-  display: inline;
-  margin-top: 20px;
-  border-left: solid 2px;
-  border-right: none;
-  }
-  footer li:first-child {
-  border: none;
-  }
   footer li:last-child {
-  border: none;
-  }
-  footer img {
-  float: none;
-  }
-  footer p {
-  margin: 0px;
-  }
-  .ironyard {
-  max-width: 150px;
-  position: absolute;
-  margin-top: 40px;
+    border: none;
   }
 }

@@ -1,3 +1,6 @@
+.border-none {
+  border: none; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,19 +14,27 @@ header {
   background-size: cover;
   height: 500px;
   position: relative; }
+  @media screen and (max-width: 320px) {
+    header {
+      height: 175px; } }
 
-@media screen and (max-width: 320px) {
-  header {
-    height: 175px; } }
 .container {
   width: 965px;
   margin: auto; }
+  @media screen and (max-width: 320px) {
+    .container {
+      width: 275px; } }
 
-@media screen and (max-width: 320px) {
-  .container {
-    width: 275px; } }
 .opener {
   text-align: center; }
+  .opener p {
+    font-family: Asap;
+    font-size: 16px;
+    color: #06344f;
+    margin: 0; }
+    @media screen and (max-width: 320px) {
+      .opener p {
+        font-size: 15px; } }
 
 #headline {
   font-family: PT Sans;
@@ -32,82 +43,62 @@ header {
   color: white;
   letter-spacing: 2px;
   margin-bottom: 0; }
+  @media screen and (max-width: 320px) {
+    #headline {
+      font-size: 33px; } }
 
-@media screen and (max-width: 320px) {
-  #headline {
-    font-size: 33px; } }
-.opener p {
-  font-family: Asap;
-  font-size: 16px;
-  color: #06344f;
-  margin: 0; }
-
-@media screen and (max-width: 320px) {
-  .opener p {
-    font-size: 15px; } }
 .blog {
   padding-top: 25px; }
-
-.blog a {
-  font-family: PT Sans;
-  font-size: 14px;
-  color: #06344f;
-  text-transform: uppercase;
-  text-decoration: none;
-  position: absolute; }
-
-@media screen and (max-width: 320px) {
   .blog a {
-    display: none; } }
+    font-family: PT Sans;
+    font-size: 14px;
+    color: #06344f;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute; }
+    @media screen and (max-width: 320px) {
+      .blog a {
+        display: none; } }
+
 #home {
   margin-right: 20px; }
 
-.right a {
-  font-family: Oswald;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #06344f;
-  text-decoration: none; }
-
 .right {
   float: right; }
+  @media screen and (max-width: 320px) {
+    .right {
+      float: none;
+      text-align: center; } }
+  .right a {
+    font-family: Oswald;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #06344f;
+    text-decoration: none; }
 
 #search {
   padding-left: 4px; }
+  @media screen and (max-width: 320px) {
+    #search {
+      display: none; } }
 
-@media screen and (max-width: 320px) {
-  .right {
-    float: none;
-    text-align: center; }
-
-  #search {
-    display: none; } }
 article .content {
   width: 500px;
   float: left; }
-
+  @media screen and (max-width: 320px) {
+    article .content {
+      width: 300px;
+      padding: 5px; } }
 article .content h1 {
   font-family: Oswald;
   text-transform: Uppercase;
   color: #06344f;
   font-size: 50px;
   line-height: 60px; }
-
-@media screen and (max-width: 320px) {
-  article .content {
-    width: 300px;
-    padding: 5px; } }
 article .content h2 {
   font-family: Asap;
   color: #9cb9c4;
   font-size: 12px; }
-
-@media screen and (max-width: 320px) {
-  article .content img {
-    display: none; }
-
-  article .author {
-    display: none; } }
 article .content h3 {
   font-family: Asap;
   font-size: 30px;
@@ -115,13 +106,19 @@ article .content h3 {
   text-transform: uppercase;
   border-left: solid #9cb9c4 3px;
   padding-left: 20px; }
-
 article .content p {
   font-family: Asap;
   color: #526870;
   font-size: 14px;
   padding-right: 5px;
   line-height: 20px; }
+article .content img {
+  height: 40px;
+  padding-right: 5px;
+  margin: -5px; }
+  @media screen and (max-width: 320px) {
+    article .content img {
+      display: none; } }
 
 article .author {
   font-family: Asap;
@@ -130,46 +127,42 @@ article .author {
   text-decoration: none;
   padding-right: 4px;
   padding-left: 12px; }
-
-article .content img {
-  height: 40px;
-  padding-right: 5px;
-  margin: -5px; }
+  @media screen and (max-width: 320px) {
+    article .author {
+      display: none; } }
 
 #dolphin {
   border-radius: 100%;
-  padding: 0; }
+  padding: 2px; }
 
 #articlelinks {
   background: blue; }
 
 .buttons {
   margin-top: 30px; }
-
-.buttons a {
-  font-family: Asap;
-  color: white;
-  font-size: 12px;
-  background-color: #9cb9c4;
-  padding: 6px 14px 6px 0px;
-  clear: both;
-  margin-right: 12px;
-  text-decoration: none; }
-
-.buttons i {
-  color: white;
-  background-color: #526870;
-  padding: 7px;
-  margin-right: 10px; }
+  .buttons a {
+    font-family: Asap;
+    color: white;
+    font-size: 12px;
+    background-color: #9cb9c4;
+    padding: 6px 14px 6px 0px;
+    clear: both;
+    margin-right: 12px;
+    text-decoration: none; }
+    @media screen and (max-width: 320px) {
+      .buttons a {
+        background: none;
+        padding: 0px;
+        margin: 0px; } }
+  .buttons i {
+    color: white;
+    background-color: #526870;
+    padding: 7px;
+    margin-right: 10px; }
 
 @media screen and (max-width: 320px) {
   #extrabutton {
-    display: none; }
-
-  .buttons a {
-    background: none;
-    padding: 0px;
-    margin: 0px; } }
+    display: none; } }
 @media screen and (max-width: 320px) {
   article .content h2 .extratext {
     display: none;
@@ -193,32 +186,27 @@ aside {
 .annie {
   text-align: center;
   margin-bottom: 50px; }
-
-.annie ul {
-  padding: 0; }
-
-.annie h1 {
-  font-family: Asap;
-  color: #126faf;
-  text-transform: uppercase;
-  font-size: 18px;
-  text-align: center; }
-
-.annie li {
-  font-family: Asap;
-  color: #9cb9c4;
-  font-size: 16px;
-  list-style: none;
-  border-left: solid #9cb9c4 2px;
-  display: inline;
-  padding: 5px; }
-
-.annie li:first-child {
-  border: none; }
-
-.annie img {
-  height: 70px;
-  margin-top: 50px; }
+  .annie img {
+    height: 70px;
+    margin-top: 50px; }
+  .annie ul {
+    padding: 0; }
+  .annie h1 {
+    font-family: Asap;
+    color: #126faf;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center; }
+  .annie li {
+    font-family: Asap;
+    color: #9cb9c4;
+    font-size: 16px;
+    list-style: none;
+    border-left: solid #9cb9c4 2px;
+    display: inline;
+    padding: 5px; }
+  .annie li:first-child {
+    border: none; }
 
 .ocean a {
   font-family: Asap;
@@ -245,16 +233,15 @@ aside {
 
 .links {
   clear: both; }
-
-.links h1 {
-  font-family: Oswald;
-  text-transform: Uppercase;
-  color: #06344f;
-  font-size: 50px;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 30px;
-  margin: 0px; }
+  .links h1 {
+    font-family: Oswald;
+    text-transform: Uppercase;
+    color: #06344f;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    margin: 0px; }
 
 section .img1 {
   display: inline-block;
@@ -263,13 +250,12 @@ section .img1 {
   margin: 0;
   float: left;
   background-size: cover;
-  background-image: url(http://1.bp.blogspot.com/-rQkvR0FkPbk/TVgPUUpyDKI/AAAAAAAAAqw/pDoq6sPfI1U/s1600/Jumping_Bottlenose_Dolphins.jpg);
   color: #06344f;
   font-family: Oswald;
   font-size: 35px;
   padding-top: 245px;
-  padding-left: 15px; }
-
+  padding-left: 15px;
+  background-image: url(http://1.bp.blogspot.com/-rQkvR0FkPbk/TVgPUUpyDKI/AAAAAAAAAqw/pDoq6sPfI1U/s1600/Jumping_Bottlenose_Dolphins.jpg); }
 section .img2 {
   display: inline-block;
   height: 300px;
@@ -277,13 +263,12 @@ section .img2 {
   margin: 0;
   float: left;
   background-size: cover;
-  background-image: url(http://www.backyardstockphotos.com/wp-content/uploads/symbiostock_rf_content/1354-surfboards-at-lumahai-beach-kauai.jpg);
   color: #06344f;
   font-family: Oswald;
   font-size: 35px;
   padding-top: 245px;
-  padding-left: 15px; }
-
+  padding-left: 15px;
+  background-image: url(http://www.backyardstockphotos.com/wp-content/uploads/symbiostock_rf_content/1354-surfboards-at-lumahai-beach-kauai.jpg); }
 section .img3 {
   display: inline-block;
   height: 300px;
@@ -291,13 +276,12 @@ section .img3 {
   margin: 0;
   float: left;
   background-size: cover;
-  background-image: url(http://mama-beach.com/mama2/wp-content/uploads/2013/07/photodune-4088822-beauty-beach-and-limestone-rocks-l.jpg);
   color: #06344f;
   font-family: Oswald;
   font-size: 35px;
   padding-top: 245px;
-  padding-left: 15px; }
-
+  padding-left: 15px;
+  background-image: url(http://mama-beach.com/mama2/wp-content/uploads/2013/07/photodune-4088822-beauty-beach-and-limestone-rocks-l.jpg); }
 section .img4 {
   display: inline-block;
   height: 300px;
@@ -305,12 +289,12 @@ section .img4 {
   margin: 0;
   float: left;
   background-size: cover;
-  background-image: url(http://a.abcnews.go.com/images/Technology/gty_bottlenose_dolphins_jt_120129_wblog.jpg);
   color: #06344f;
   font-family: Oswald;
   font-size: 35px;
   padding-top: 245px;
-  padding-left: 15px; }
+  padding-left: 15px;
+  background-image: url(http://a.abcnews.go.com/images/Technology/gty_bottlenose_dolphins_jt_120129_wblog.jpg); }
 
 footer {
   background-color: #06344f;
@@ -318,64 +302,61 @@ footer {
   height: 80px;
   clear: both;
   margin: auto; }
+  @media screen and (max-width: 320px) {
+    footer {
+      height: 200px;
+      text-align: center;
+      position: relative;
+      padding: 15px; } }
+  footer img {
+    float: left;
+    margin-top: 10px; }
+    @media screen and (max-width: 320px) {
+      footer img {
+        float: none; } }
+  footer p {
+    margin-top: 35px; }
+    @media screen and (max-width: 320px) {
+      footer p {
+        margin: 0px; } }
+  footer li {
+    list-style: none;
+    font-family: Asap;
+    font-size: 11px;
+    color: #9cb9c4;
+    float: right;
+    border-right: solid #9cb9c4 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 35px; }
+    @media screen and (max-width: 320px) {
+      footer li {
+        float: none;
+        display: inline;
+        margin-top: 20px;
+        border-left: solid 2px;
+        border-right: none; } }
 
-footer .ironyard {
+.ironyard {
   font-size: 11px;
   font-family: Asap;
   color: #9cb9c4;
   float: left;
   width: 400px; }
-
-footer img {
-  float: left;
-  margin-top: 10px; }
-
-footer p {
-  margin-top: 35px; }
-
-footer li {
-  list-style: none;
-  font-family: Asap;
-  font-size: 11px;
-  color: #9cb9c4;
-  float: right;
-  border-right: solid #9cb9c4 2px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-top: 35px; }
+  @media screen and (max-width: 320px) {
+    .ironyard {
+      max-width: 150px;
+      position: absolute;
+      margin-top: 40px; } }
 
 footer li:first-child {
   margin-right: none;
   border-right: none;
   padding: none; }
+  @media screen and (max-width: 320px) {
+    footer li:first-child {
+      border: none; } }
 
 @media screen and (max-width: 320px) {
-  footer {
-    height: 200px;
-    text-align: center;
-    position: relative;
-    padding: 15px; }
-
-  footer li {
-    float: none;
-    display: inline;
-    margin-top: 20px;
-    border-left: solid 2px;
-    border-right: none; }
-
-  footer li:first-child {
-    border: none; }
-
   footer li:last-child {
-    border: none; }
-
-  footer img {
-    float: none; }
-
-  footer p {
-    margin: 0px; }
-
-  .ironyard {
-    max-width: 150px;
-    position: absolute;
-    margin-top: 40px; } }
+    border: none; } }
